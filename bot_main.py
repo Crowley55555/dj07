@@ -1,9 +1,13 @@
+import os
+from dotenv import load_dotenv
 from telebot.types import Message
 import telebot
 import requests
 
+load_dotenv()
+BOT_TOKEN = os.getenv('TELEGRAM_BOT_TOKEN')
+
 API_URL = 'http://127.0.0.1:8000/api/'
-BOT_TOKEN = '8159160029:AAFqOA0ec8ZlCkZgYBUIjbZ_jA2K007AqdA'
 
 bot = telebot.TeleBot(BOT_TOKEN)
 
